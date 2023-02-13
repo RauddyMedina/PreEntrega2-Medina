@@ -1,0 +1,34 @@
+/* Página de contacto */
+.hero-page {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)), url(../images/Rauddy_a_chef_making_a_hamburg_with_double_meat_in_a_kitchen_of_fc7f7373-8d70-427e-b9e5-2f58956b080e.png) center;
+    background-size: cover;
+    height: 200px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrap-hero-page {
+        color: #fff;
+        padding: 1rem;
+
+    }
+
+}
+
+/* botones-carta-sup */
+
+#galeria-carta, .col-lg-3, .col-sm-12, .col-md-6 {
+    margin: 0 !important;
+    padding: 15px;
+
+    img {
+        width: 100%;
+
+        &:hover {
+            border: 5px solid #f7f7f7;
+         }
+      
+    }
+   
+}
