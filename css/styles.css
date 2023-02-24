@@ -67,6 +67,73 @@ h6 {
 }
 
 /* Header  */
+:root {
+  --main-c: #FFC300;
+  --black-c: #000;
+}
+
+/** Estilos Generales **/
+html {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+/* Enlaces & Botones*/
+.cta-main {
+  background-color: var(--main-c);
+  padding: 1rem 1rem;
+  color: #fff;
+  font-size: bold;
+  border-radius: 2px;
+}
+.cta-main:hover {
+  color: var(--main-c);
+}
+
 header.main-header {
   position: relative;
   top: 0;
@@ -122,23 +189,23 @@ header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu {
   align-items: center;
   font-size: 1.1rem;
 }
+header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu li.menu-item {
+  margin: 0.75rem;
+  display: flex;
+}
+header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu li.menu-item a {
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu li.menu-item a:hover {
+  color: var(--main-c);
+}
 header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu #nav-main-contact {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: var(--main-c);
   color: #fff;
-}
-header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-item {
-  margin: 0.75rem;
-  display: flex;
-}
-header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-item a {
-  padding: 0.5rem 1rem;
-  color: #fff;
-}
-header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-item a:hover {
-  color: var(--main-c);
 }
 
 @media (min-width: 880px) {
@@ -170,12 +237,11 @@ header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-
     top: 3%;
     left: 3%;
   }
-  header.main-header .header-wrap .wrap-logo-header .logo-header a,
-  header.main-header .header-wrap .wrap-logo-header li.menu-item a {
+  header.main-header .header-wrap .wrap-logo-header .logo-header {
     color: #222;
   }
-  header.main-header .header-wrap .wrap-nav-header .nav-header i.toggle-menu {
-    display: flex;
+  header.main-header .header-wrap .wrap-logo-header .logo-header a {
+    color: #222;
   }
   header.main-header .header-wrap .wrap-nav-header .nav-header label.checkbtn {
     position: fixed;
@@ -184,7 +250,10 @@ header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-
     z-index: 9999;
     cursor: pointer;
   }
-  header.main-header .header-wrap .wrap-nav-header .nav-header label.checkbtn #check:checked ~ ul {
+  header.main-header .header-wrap .wrap-nav-header .nav-header label.checkbtn i.toggle-menu {
+    display: flex;
+  }
+  header.main-header .header-wrap .wrap-nav-header .nav-header #check:checked ~ ul {
     display: flex;
     z-index: 9;
     flex-flow: column;
@@ -197,12 +266,22 @@ header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-
   header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu {
     position: fixed;
     background-color: #fff;
-  }
-  header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu #nav-main-contact {
     display: none;
     left: 0;
     margin: 0;
     padding: 0;
+  }
+  header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu li.menu-item a {
+    color: #222;
+  }
+  header.main-header .header-wrap .wrap-nav-header .nav-header #nav-main-contact {
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  header.main-header .header-wrap .wrap-nav-header .nav-header #nav-main-contact a {
+    color: #222;
   }
 }
 /* hero section homepage */
@@ -286,17 +365,17 @@ header.main-header .header-wrap .wrap-nav-header .nav-header ul.main-menu .menu-
 }
 
 @media (max-width: 1200px) {
-  .column-4 {
+  .section .column-4 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 880px) {
-  .column-4 {
+  .section .column-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 640px) {
-  .column-4 {
+  .section .column-4 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
