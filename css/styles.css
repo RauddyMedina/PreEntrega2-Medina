@@ -477,65 +477,64 @@ footer .footer-creds .legal-creds ul li a {
 }
 
 /* Tarjetas de Blog */
-.wrap-title-section2 {
+.section .wrap-title-section2 {
   color: #f2f2f2;
 }
-
-.card-wrap {
+.section .card-wrap {
   display: flex;
   flex-flow: wrap;
 }
-.card-wrap article.card {
+.section .card-wrap article.card {
   max-width: 350px;
   background-color: #f8f8f8;
   margin: 1rem;
   box-shadow: 0px 0px 12px #d7d7d7;
 }
-.card-wrap article.card .header-card {
+.section .card-wrap article.card .header-card {
   display: flex;
 }
-.card-wrap article.card .header-card img {
+.section .card-wrap article.card .header-card img {
   border-radius: 8px 8px 0 0;
   max-height: 200px;
   height: 200px;
   width: 100%;
 }
-.card-wrap article.card .footer-card {
+.section .card-wrap article.card .footer-card {
   display: flex;
   flex-flow: column;
   padding: 0 1rem;
 }
-.card-wrap article.card .footer-card .categoria-card {
+.section .card-wrap article.card .footer-card .categoria-card {
   margin-top: 1rem;
 }
-.card-wrap article.card .footer-card .categoria-card span {
+.section .card-wrap article.card .footer-card .categoria-card span {
   background: var(--main-c);
   border-radius: 4px;
   padding: 0.2rem 0.5rem;
   color: #fff;
 }
-.card-wrap article.card .footer-card .perfil-card {
+.section .card-wrap article.card .footer-card .perfil-card {
   display: flex;
   align-items: center;
 }
-.card-wrap article.card .footer-card .perfil-card .img-perfil-card {
+.section .card-wrap article.card .footer-card .perfil-card .img-perfil-card {
   display: flex;
 }
-.card-wrap article.card .footer-card .perfil-card .img-perfil-card img {
+.section .card-wrap article.card .footer-card .perfil-card .img-perfil-card img {
   width: 50px;
   border-radius: 50%;
   margin: 1rem 1rem 1rem 0;
 }
-.card-wrap article.card .footer-card .perfil-card .text-perfil-card {
+.section .card-wrap article.card .footer-card .perfil-card .text-perfil-card {
   display: flex;
   flex-flow: column;
 }
-.card-wrap article.card .footer-card .perfil-card .text-perfil-card span:nth-child(2) {
+.section .card-wrap article.card .footer-card .perfil-card .text-perfil-card span:nth-child(2) {
   color: #cfcfcf;
 }
 
 @media (max-width: 768px) {
-  .card-wrap {
+  .section .card-wrap {
     justify-content: center;
   }
 }
